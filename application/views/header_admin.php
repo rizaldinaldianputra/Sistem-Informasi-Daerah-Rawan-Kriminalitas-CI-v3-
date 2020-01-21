@@ -57,6 +57,8 @@
           <li><a href="<?php echo base_url("admin/datakejahatan"); ?>">Data Kejahatan</a></li>
           <li><a href="<?php echo base_url("admin/inputkejahatan"); ?>">Input Data</a></li>
           <li><a href="<?php echo base_url("admin/register"); ?>">Tambah Admin</a></li>
+          <li><a href="<?php echo base_url("admin/admindatakejahatan"); ?>">Data Kejahatan</a></li>
+
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="<?php echo base_url('login/logout'); ?>"><i class="fa fa-users"></i>Logout<span></span></a></li>

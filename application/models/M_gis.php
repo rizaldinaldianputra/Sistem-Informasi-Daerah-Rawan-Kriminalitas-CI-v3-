@@ -53,4 +53,31 @@ class M_gis extends CI_Model
   {
     $this->db->insert('tbl_admin', $data2);
   }
+
+  public function updateadmin($data)
+  {
+    $this->db->where('username', $data['username']);
+    $this->db->update('tbl_login', $data);
+  }
+  public function deleteadmin($data)
+  {
+    $this->db->where('id', $data['id']);
+    $this->db->delete('tbl_login');
+  }
+  //detail data
+  public function detailadmin($username)
+  {
+    $this->db->select('*');
+    $this->db->from('tbl_login');
+    $this->db->where('username', $username);
+    $query = $this->db->get();
+    return $query->row();
+  }
+  public function admindatakejahatan()
+  {
+    $this->db->select('*');
+    $this->db->from('tbl_login');
+    $query = $this->db->get();
+    return $query->result();
+  }
 }

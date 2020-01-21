@@ -17,18 +17,18 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 </head>
 
-<body>\
+<body>
+
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!------ Include the above in your HEAD tag ---------->
 
 	<?php echo form_open('admin/register'); ?>
-	<div class="col-sm-5">
+	<div class="col-sm-12">
 		<div class="panel panel-primary">
 			<div class="panel-heading">Form Pendaftaran User</div>
 			<div class="panel-body">
-
 				<form class="form-horizontal">
 					<div class="form-group">
 						<label class="col-sm-4 control-label"> Nama :</label>
@@ -84,7 +84,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		</div>
 	</div>
 
-	<div class="col-sm-8">
+	<div class="col-sm-12">
 		<div class="panel panel-primary">
 			<div class="panel-heading">Biodata</div>
 			<div class="panel-body">
@@ -139,12 +139,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					</div>
 					<br>
 					<br>
-					<div class="col-sm-8">
-						<div class="panel panel-primary">
+					<div class="form-group">
+						<label class="col-sm-4 control-label"></label>
+						<div class="col-sm-8">
+							<button name="btnSubmit" class="btn btn-primary" type="submit" value="Daftar">Simpan</button>
 
-							<div class="panel-body">
-								<input type="submit" class="fa fa-primary" name="btnSubmit" id="btn" value="Daftar" />
-							</div>
 						</div>
 					</div>
 			</div>

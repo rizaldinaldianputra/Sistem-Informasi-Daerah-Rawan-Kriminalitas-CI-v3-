@@ -203,4 +203,36 @@ class Admin extends CI_Controller
             $this->load->view('v_success', $pesan);
         }
     }
+
+    public function updateadmin($id)
+    {
+        $i = $this->input;
+        $data = array(
+            'id' => $id,
+            'nama' => $i->post('nama'),
+            'username' => $i->post('username'),
+            'email' => $i->post('email')
+        );
+        $this->m_gis->updateadmin($data);
+        $this->session->set_flashdata(' sukses', ' data berhasil diperbarui');
+        redirect(base_url('admin/admindatakejahatan'), 'refresh');
+    }
+    public function deleteadmin($id)
+    {
+        $data = array('id' => $id);
+        $this->m_gis->deleteadmin($data);
+        $this->session->set_flashdata('sukses', 'berhasil di hapus..!!');
+        redirect(base_url('admin/admindatakejahatan'), 'refresh');
+    }
+
+    public function admindatakejahatan()
+    {
+        $kejahatan = $this->m_gis->admindatakejahatan();
+        $map = $this->googlemaps->create_map();
+        $data = array(
+            'map'       => $map,
+            'kejahatan' => $kejahatan
+        );
+        $this->load->view('v_dataadmin', $data, FALSE);
+    }
 }
