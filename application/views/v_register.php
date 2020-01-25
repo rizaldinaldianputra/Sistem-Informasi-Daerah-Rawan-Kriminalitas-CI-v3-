@@ -30,15 +30,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			<div class="panel-heading">Form Pendaftaran User</div>
 			<div class="panel-body">
 				<form class="form-horizontal">
-					<div class="form-group">
-						<label class="col-sm-4 control-label"> Nama :</label>
-						<div class="col-sm-8">
-							<input type="text" name="name" value="<?php echo set_value('name'); ?>" />
-							<?php echo form_error('name'); ?>
-						</div>
-					</div>
-
-					<br>
 
 					<div class="form-group">
 						<label class="col-sm-4 control-label"> Username </label>
@@ -89,6 +80,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			<div class="panel-heading">Biodata</div>
 			<div class="panel-body">
 				<form class="form-horizontal">
+					<div class="form-group">
+						<label class="col-sm-4 control-label"> Nama :</label>
+						<div class="col-sm-8">
+							<input type="text" name="name" value="<?php echo set_value('name'); ?>" />
+							<?php echo form_error('name'); ?>
+						</div>
+					</div>
+
+					<br>
+
 					<div class="form-group">
 						<label class="col-sm-4 control-label"> NIK </label>
 						<div class="col-sm-8">
